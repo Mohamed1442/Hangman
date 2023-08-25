@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="keyboard.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Hangman</h1>
+      <p>Find the hidden word - Enter a letter</p>
+    </header>
+    <section class="game-section container">
+      <div class="game-wrong-container">
+        <div class="game-container">
+          <svg height="250" width="200" class="figure-container">
+            <!-- Rod -->
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="20" x2="60" y2="230" />
+            <line x1="20" y1="230" x2="100" y2="230" />
+
+            <!-- Head -->
+            <circle cx="140" cy="70" r="20" class="figure-part" />
+            <!-- Body -->
+            <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+            <!-- Arms -->
+            <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+            <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+            <!-- Legs -->
+            <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+            <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+          </svg>
+        </div>
+        <div class="wrong-letters-container hidden">
+          <p>Wrong</p>
+          <div class="wrong-letters">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="letters-container"></div>
+      <div class="base hidden-keyboard">
+        <div class="line1">
+          <span class="key">Q</span>
+          <span class="key">W</span>
+          <span class="key">E</span>
+          <span class="key">R</span>
+          <span class="key">T</span>
+          <span class="key">Y</span>
+          <span class="key">U</span>
+          <span class="key">I</span>
+          <span class="key">O</span>
+          <span class="key">P</span>
+        </div>
+        <div class="line2">
+          <span class="key">A</span>
+          <span class="key">S</span>
+          <span class="key">D</span>
+          <span class="key">F</span>
+          <span class="key">G</span>
+          <span class="key">H</span>
+          <span class="key">J</span>
+          <span class="key">K</span>
+          <span class="key">L</span>
+        </div>
+        <div class="line3">
+          <span class="key">Z</span>
+          <span class="key">X</span>
+          <span class="key">C</span>
+          <span class="key">V</span>
+          <span class="key">B</span>
+          <span class="key">N</span>
+          <span class="key">M</span>
+        </div>
+        <div class="line4">
+          <span class="key">Space</span>
+        </div>
+      </div>
+    </section>
+    <div class="modal hidden">
+      <p class="modal-message"></p>
+      <button class="btn play-again">Play Again</button>
+    </div>
+    <div class="backdrop hidden"></div>
+    <div class="alert-message-box">
+      <p>You have already entered this letter</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- Congratulations! You won! 😃 -->
